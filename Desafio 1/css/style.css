@@ -1,0 +1,98 @@
+/* === Reset Global === */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BODY ======================== */
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: gray;
+}
+
+main {
+  padding: 30px 20vw;
+}
+
+/* Container ======================== */
+.container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 5%;
+
+  background-color: rgb(72, 72, 72);
+  border-radius: 1.5rem;
+}
+
+.container h1 {
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 10px 10px 20px 10px;
+}
+
+.data {
+  margin: 30px;
+}
+
+/* Buttons ======================== */
+.action-buttons {
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.action-buttons button {
+  width: 9rem;
+  height: 3rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-weight: bold;
+  opacity: 0.8;
+
+  cursor: pointer;
+}
+
+.action-buttons button:hover {
+  opacity: 1;
+}
+
+.action-buttons .btn-eu {
+  background-color: #00ff00;
+}
+
+.action-buttons .btn-vou {
+  background-color: #ffff00;
+}
+
+.action-buttons .btn-virar {
+  background-color: #0099cc;
+}
+
+.action-buttons .btn-dev {
+  background-color: #ff1a1a;
+}
+
+/* Lines ======================== */
+.span-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 10px 10px 10px;
+
+  font-weight: bold;
+}
+
+.span-text span {
+  margin: 2px;
+}

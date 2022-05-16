@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Calcular IMC</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/modal.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
+  </head>
+
+  <body>
+    <section class="container">
+      <h1>Tabela IMC</h1>
+
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>IMC</th>
+            <th></th>
+            <th>RESULTADO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="description">Menor que 18,5</td>
+            <td></td>
+            <td>Abaixo do Peso</td>
+          </tr>
+
+          <tr>
+            <td class="description">Entre 18,5 e 24,9</td>
+            <td></td>
+            <td>Peso Normal</td>
+          </tr>
+
+          <tr>
+            <td class="description">Entre 25 e 29,9</td>
+            <td></td>
+            <td>Sobrepeso</td>
+          </tr>
+
+          <tr>
+            <td class="description">Entre 30 e 34,9</td>
+            <td></td>
+            <td>Obesidade Grau 1</td>
+          </tr>
+
+          <tr>
+            <td class="description">Entre 35 e 39,9</td>
+            <td></td>
+            <td>Obesidade Grau 2</td>
+          </tr>
+
+          <tr>
+            <td class="description">Maior do que 40</td>
+            <td></td>
+            <td>Obesidade Grau 3</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1>Calcule seu IMC</h1>
+
+      <form action="/" id="form" method="POST">
+        <label for="peso" id="peso-label">Peso: 0 kg</label>
+        <input
+          type="range"
+          id="peso"
+          value="0"
+          step="1"
+          min="0"
+          max="500"
+          oninput="showRange(true)"
+        />
+
+        <label for="altura" id="altura-label">Altura: 0 m</label>
+        <input
+          type="range"
+          id="altura"
+          value="0"
+          step="0.01"
+          min="0"
+          max="3.00"
+          oninput="showRange(false)"
+        />
+
+        <button type="submit">Calcular</button>
+      </form>
+    </section>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="message">
+          <h2>Resultado</h2>
+          <p id="resultado"></p>
+          <div class="input-modal action">
+            <button class="confirm">Recalcular</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/modal.js"></script>
+  </body>
+</html>
